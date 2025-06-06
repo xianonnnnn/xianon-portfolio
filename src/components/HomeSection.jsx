@@ -6,7 +6,7 @@ export const HomeSection = () => {
             id="home"
             className="relative min-h-screen flex flex-col items-center md:items-start justify-center px-4"
             >
-            <div className="container max-w-4xl mx-auto text-center md:text-left z-10">
+            <div className="container max-w-8xl mx-auto text-center md:text-left z-10">
                 <div className="space-y-6">
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 opacity-0 animate-fade-in">
                     Hello, I'm
