@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState  } from "react";
 
 const navItems = [
-    {name: "Home", href: "#hero"},
+    {name: "Home", href: "#home"},
     {name: "Tech", href: "#tech"},
     {name: "Projects", href: "#projects"},
     {name: "Experience", href: "#experience"},
@@ -32,9 +32,9 @@ export const Navbar = () => {
             )}
         >
             <div className="container flex items-center justify-between">
-                <a className="text-2xl font-bold text-primary flex items-center" href ="hero">
+                <a className="text-2xl font-bold text-primary flex items-center" href ="home">
                     <span className="text-glow">
-                        <span className="text-glow text-foreground"> x</span>ian<span className="text-glow text-foreground">on</span>.
+                        <span className="text-glow text-foreground"> x</span>ian<span className="text-glow text-foreground">on</span>
                     </span>
                 </a>
 
