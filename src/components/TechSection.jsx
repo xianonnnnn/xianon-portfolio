@@ -1,10 +1,28 @@
 import { useState } from "react"
 import { cn } from '@/lib/utils'
 
+// Map of skill names to their SVG file paths
+const techIcons = {
+    "HTML": "/techs/html5.svg",
+    "CSS": "/techs/css3.svg",
+    "JavaScript": "/techs/js.svg",
+    "React": "/techs/react.svg",
+    "TypeScript": "/techs/typescript.svg",
+    "Tailwind CSS": "/techs/tailwindcss.svg",
+    "Next.js": "/techs/nextjs2.svg",
+    "PostgreSQL": "/techs/postgresql.svg",
+    "Python": "/techs/python.svg",
+    "Git/Github": "/techs/github (1).svg",
+    "Figma": "/techs/figma.svg",
+    "Microsoft Excel": "/techs/excel.svg",
+    "Google SpreadSheets": "/techs/sheets.svg",
+    "VS Code": "/techs/vscode.svg",
+}
 
 const skills = [
     // Frontend
-    {name: "HTML/CSS", category: "frontend"},
+    {name: "HTML", category: "frontend"},
+    {name: "CSS", category: "frontend"},
     {name: "JavaScript", category: "frontend"},
     {name: "React", category: "frontend"},
     {name: "TypeScript", category: "frontend"},
@@ -13,6 +31,7 @@ const skills = [
 
     // Backend
     {name: "PostgreSQL", category: "backend"},
+    {name: "Python", category: "backend"},
 
     // Tools
     {name: "Git/Github", category: "tools"},
@@ -53,12 +72,30 @@ export const SkillsSection = () => {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-7 justify-center">
                     {filteredSkills.map((skill, key) => (
-                        <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
-                            <div className="text-left mb-4">
-                                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-                            </div>
+                        <div 
+                            key={key} 
+                            className="bg-card/90 p-6 rounded-lg shadow-xs card-hover aspect-square flex flex-col items-center justify-center gap-4"
+                        >
+                            {techIcons[skill.name] ? (
+                                <>
+                                    <div className="flex-1 flex items-center justify-center">
+                                        <img 
+                                            src={techIcons[skill.name]} 
+                                            alt={skill.name}
+                                            className="w-25 h-25 object-contain"
+                                        />
+                                    </div>
+                                    <span className="text-sm font-medium text-center text-muted-foreground">
+                                        {skill.name}
+                                    </span>
+                                </>
+                            ) : (
+                                <div className="w-25 h-25 flex items-center justify-center text-muted-foreground">
+                                    {skill.name}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
