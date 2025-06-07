@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState  } from "react";
 
 const navItems = [
+    {name: "About Me", href: "#about"},
     {name: "Tech", href: "#tech"},
     {name: "Projects", href: "#projects"},
     {name: "Experience", href: "#experience"},
@@ -26,12 +27,12 @@ export const Navbar = () => {
     return (
         <nav 
             className={cn(
-                "fixed w-full z-40 transition-all duration-300",
+                "fixed w-full z-40 py-5 bg-background/70 backdrop-blur-md shadow-xs transition-all duration-300",
                 isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
             )}
         >
             <div className="container flex items-center justify-between">
-                <a className="text-4xl font-bold text-primary flex items-center" href ="#home">
+                <a className="text-2xl font-bold text-primary flex items-center" href ="#home">
                     <span className="text-glow">
                         <span className="text-glow text-foreground"> x</span>ian<span className="text-glow text-foreground">on</span>
                     </span>
