@@ -1,6 +1,18 @@
 import { ArrowDown } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export const HomeSection = () => {
+    const [hideOnScroll, setHideOnScroll] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setHideOnScroll(window.scrollY > 50); // fade out after 50px scroll
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+    
     return (
         <section
             id="home"
@@ -48,11 +60,15 @@ export const HomeSection = () => {
                 </div>
                 </div>
             </div>
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in-delay-5">
+            <div
+                className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-500 ${
+                    hideOnScroll ? "opacity-0" : "opacity-100"
+                }`}
+                >
                 <div className="flex flex-col items-center animate-bounce">
                     <span>Scroll</span>
                     <ArrowDown className="h-5 w-5 text-primary" />
-                </div>
+            </div>
             </div>
         </section>
     )

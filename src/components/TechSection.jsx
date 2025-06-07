@@ -32,7 +32,7 @@ export const SkillsSection = () => {
 
     return (
         <section id="tech" className="py-24 px-4 relative bg-secondary/30">
-            <div className="container mx-auto max-w-5xl">
+            <div className="container mx-auto max-w-8xl">
                 <h2 className="text-5xl md:text-6xl font-bold mb-12 text-center text-glow">
                     <span className="text-primary text-glow"> Tech</span> Stacks
                 </h2>
