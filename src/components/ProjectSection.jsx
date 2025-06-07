@@ -39,11 +39,11 @@ export const ProjectSection = () => {
             id="projects" className="py-24 px-4 relative"
         >
             <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center"> 
+                <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center text-glow"> 
                     Featured <span className="text-primary"> Projects</span> 
                 </h2>
 
-                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+                <p className="md:text-lg text-center text-muted-foreground mt-8 mb-12 max-w-2xl mx-auto">
                     Here are some of my recent projects. Each project was carefully
                     crafted with attention to dtail, performance, and user experience.
                 </p>
