@@ -4,7 +4,7 @@ const projects = [
     {
         id: 1,
         title: "Project 1",
-        description: "Lorem ipsum kinempersz and everything else.",
+        description: "Lorem ipsum kinempersz and everything else. Lorem ipsum kineddsgsggsgmpersz and everything else. Lorem ipsum kinempersz and everything else.",
         image: "/projects/",
         tags: ["React", "TailwindCSS", "Supabase"],
         demoUrl: "#",
@@ -61,7 +61,10 @@ export const ProjectSection = () => {
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
-                            <div className="p-6">
+                            <div className="p-6">                           
+                                <h3 className="text-xl font-semibold mb-2"> {project.title}</h3>
+                                <p className="text-muted-foreground text-sm mb-4 text-justify">{project.description}</p>
+
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tags.map((tag) => (
                                         <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
@@ -69,11 +72,8 @@ export const ProjectSection = () => {
                                         </span>
                                     ))}
                                 </div>
-                            
-                                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-                                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
-                                <div className="flex justify-between items-center">
+                                <div className="flex justify-center items-center">
                                     <div className="flex space-x-3">
                                         <a 
                                             href={project.demoUrl} 
@@ -90,6 +90,7 @@ export const ProjectSection = () => {
                                         </a>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     ))}
