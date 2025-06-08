@@ -27,21 +27,22 @@ export const Navbar = () => {
     return (
         <nav 
             className={cn(
-                "fixed w-full z-40 transition-all duration-300 bg-background/80",
+                "fixed w-full z-40 transition-all duration-300 bg-background/100",
                 isScrolled ? "py-3 bg-background/90 backdrop-blur-md shadow-xs" : "py-5"
             )}
         >
             <div className="container flex items-center justify-between">
                 <a className="text-2xl font-bold text-primary flex items-center" href ="#home">
-                    <span className="text-glow">
+                    <img src="/public/Frame 3.svg" alt="logo" height="32" width="32"/>
+                    <span className="text-glow px-1 pb-2">
                         <span className="text-glow text-foreground"> x</span>ian<span className="text-glow text-foreground">on</span>
                     </span>
                 </a>
 
                 {/* desktop nav */}
-                <div className="hidden md:flex space-x-12">
+                <div className="hidden md:flex space-x-15">
                     {navItems.map((item, key) => (
-                        <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                        <a key={key} href={item.href} className="text-foreground/80 font-semibold hover:text-primary transition-colors duration-300">
                             {item.name}
                         </a>
                     ))}
