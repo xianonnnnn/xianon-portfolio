@@ -15,7 +15,7 @@ const techIcons = {
     "Git/Github": "/techs/github (1).svg",
     "Figma": "/techs/figma.svg",
     "Microsoft Excel": "/techs/excel.svg",
-    "Google SpreadSheets": "/techs/sheets.svg",
+    "SpreadSheets": "/techs/sheets.svg",
     "VS Code": "/techs/vscode.svg",
 }
 
@@ -37,7 +37,7 @@ const skills = [
     {name: "Git/Github", category: "tools"},
     {name: "Figma", category: "tools"},
     {name: "Microsoft Excel", category: "tools"},
-    {name: "Google SpreadSheets", category: "tools"},
+    {name: "SpreadSheets", category: "tools"},
     {name: "VS Code", category: "tools"},
 ]
 
@@ -51,7 +51,7 @@ export const SkillsSection = () => {
 
     return (
         <section id="tech" className="py-24 px-4 relative bg-secondary/30">
-            <div className="container mx-auto max-w-8xl">
+            <div className="container mx-auto max-w-7xl">
                 <h2 className="text-5xl md:text-6xl font-bold mb-12 text-center text-glow">
                     <span className="text-primary text-glow"> Tech</span> Stacks
                 </h2>

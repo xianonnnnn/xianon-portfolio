@@ -38,7 +38,7 @@ export const ProjectSection = () => {
         <section
             id="projects" className="py-24 px-4 relative"
         >
-            <div className="container mx-auto max-w-8xl">
+            <div className="container mx-auto max-w-7xl">
                 <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center text-glow"> 
                     Featured <span className="text-primary"> Projects</span> 
                 </h2>
@@ -48,11 +48,11 @@ export const ProjectSection = () => {
                     crafted with attention to dtail, performance, and user experience.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
                     {projects.map((project, key) => (
                         <div 
                             key={key} 
-                            className="group bg-card/90 rounded-xl overflow-hidden shadow-lg card-hover w-full max-w-md p-6"
+                            className="group bg-card/90 rounded-xl overflow-hidden shadow-lg card-hover w-full max-w-md p-6 flex flex-col items-center justify-center mx-auto"
                         >
                             <div className="h-48 overflow-hidden">
                                 <img 
@@ -63,9 +63,9 @@ export const ProjectSection = () => {
                             </div>
                             <div className="p-6">                           
                                 <h3 className="text-2xl font-semibold mb-2"> {project.title}</h3>
-                                <p className="text-muted-foreground textb-base mb-3 mt-3 text-justify">{project.description}</p>
+                                <p className="text-muted-foreground textb-base mb-5 mt-3 text-justify">{project.description}</p>
 
-                                <div className="flex flex-wrap gap-2 mb-4">
+                                <div className="flex flex-wrap gap-2 mb-4 justify-center">
                                     {project.tags.map((tag) => (
                                         <span className="px-3 py-1 text-s font-medium border rounded-full bg-secondary text-secondary-foreground">
                                             {tag}
