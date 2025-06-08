@@ -1,4 +1,3 @@
-
 import {cn} from "@/lib/utils"
 import { Menu, X } from "lucide-react";
 import { useEffect, useState  } from "react";
@@ -33,7 +32,7 @@ export const Navbar = () => {
         >
             <div className="container flex items-center justify-between">
                 <a className="text-2xl font-bold text-primary flex items-center" href ="#home">
-                    <img src="/public/Frame 3.svg" alt="logo" height="32" width="32"/>
+                    <img src="/Frame 3.svg" alt="logo" height="32" width="32"/>
                     <span className="text-glow px-1 pb-2">
                         <span className="text-glow text-foreground"> x</span>ian<span className="text-glow text-foreground">on</span>
                     </span>
