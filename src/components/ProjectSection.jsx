@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react"
+import { useScrollFade } from "../lib/useScrollFade"
 
 const projects = [
     {
@@ -34,9 +35,19 @@ const projects = [
 ]
 
 export const ProjectSection = () => {
+    const { elementRef, isVisible, isFadingOut, hasAnimated } = useScrollFade(0.1, 0.8);
+
     return (
         <section
-            id="projects" className="py-24 px-4 relative"
+            ref={elementRef}
+            id="projects" 
+            className={`py-24 px-4 relative transition-all duration-800 ${
+                isVisible 
+                    ? 'animate-scroll-fade-in' 
+                    : isFadingOut 
+                        ? 'animate-scroll-fade-out' 
+                        : 'opacity-0 translate-y-8'
+            }`}
         >
             <div className="container mx-auto max-w-7xl">
                 <h2 className="text-5xl md:text-6xl font-bold mb-4 text-center text-glow"> 

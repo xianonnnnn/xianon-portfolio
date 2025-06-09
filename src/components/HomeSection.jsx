@@ -1,8 +1,10 @@
 import { ArrowDown } from "lucide-react"
 import { useEffect, useState } from "react"
+import { useScrollFade } from "../lib/useScrollFade"
 
 export const HomeSection = () => {
     const [hideOnScroll, setHideOnScroll] = useState(false);
+    const { elementRef, isVisible, isFadingOut, hasAnimated } = useScrollFade(0.1, 0.8);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,8 +17,15 @@ export const HomeSection = () => {
     
     return (
         <section
+            ref={elementRef}
             id="home"
-            className="relative min-h-screen flex flex-col items-center md:items-start justify-center px-4"
+            className={`relative min-h-screen flex flex-col items-center md:items-start justify-center px-4 transition-all duration-800 ${
+                isVisible 
+                    ? 'animate-scroll-fade-in' 
+                    : isFadingOut 
+                        ? 'animate-scroll-fade-out' 
+                        : 'opacity-0 translate-y-8'
+            }`}
             >
             <div className="container max-w-7xl mx-auto z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

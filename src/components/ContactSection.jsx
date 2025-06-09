@@ -1,8 +1,10 @@
 import { Mail, Github, Linkedin, Check } from "lucide-react"
 import { useState } from "react"
+import { useScrollFade } from "../lib/useScrollFade"
 
 export const ContactSection = () => {
     const [isCopied, setIsCopied] = useState(false);
+    const { elementRef, isVisible, isFadingOut, hasAnimated } = useScrollFade(0.1, 0.8);
     const email = "kristiangabot@yahoo.com";
 
     const handleCopyEmail = async () => {
@@ -17,8 +19,15 @@ export const ContactSection = () => {
 
     return (
         <section
+            ref={elementRef}
             id="contact"
-            className="py-24 px-4 relative bg-secondary/30"
+            className={`py-24 px-4 relative bg-secondary/30 transition-all duration-800 ${
+                isVisible 
+                    ? 'animate-scroll-fade-in' 
+                    : isFadingOut 
+                        ? 'animate-scroll-fade-out' 
+                        : 'opacity-0 translate-y-8'
+            }`}
         >
             <div className="container max-w-7xl mx-auto z-10 text-glow">
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
