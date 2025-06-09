@@ -72,11 +72,11 @@ export const SkillsSection = () => {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-7 justify-center">
+                <div className="flex flex-wrap justify-center gap-7">
                     {filteredSkills.map((skill, key) => (
                         <div 
                             key={key} 
-                            className="bg-card/90 p-6 rounded-lg shadow-xs card-hover aspect-square flex flex-col items-center justify-center gap-4"
+                            className="bg-card/85 p-6 rounded-lg shadow-xs card-hover w-[150px] h-[160px] flex flex-col items-center justify-center gap-4"
                         >
                             {techIcons[skill.name] ? (
                                 <>
@@ -84,7 +84,7 @@ export const SkillsSection = () => {
                                         <img 
                                             src={techIcons[skill.name]} 
                                             alt={skill.name}
-                                            className="w-25 h-25 object-contain"
+                                            className="w-20 h-20 object-contain"
                                         />
                                     </div>
                                     <span className="text-sm font-medium text-center text-muted-foreground">

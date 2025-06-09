@@ -3,10 +3,11 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState  } from "react";
 
 const navItems = [
-    /*{name: "About Me", href: "#about"},*/
+    
     {name: "Tech", href: "#tech"},
     {name: "Projects", href: "#projects"},
     /*{name: "Experience", href: "#experience"},*/
+    {name: "About", href: "#about"},
     {name: "Contact", href: "#contact"},
 ];
 
@@ -26,7 +27,7 @@ export const Navbar = () => {
     return (
         <nav 
             className={cn(
-                "fixed w-full z-40 transition-all duration-300 bg-background/100",
+                "fixed w-full z-40 transition-all duration-300 bg-background/10",
                 isScrolled ? "py-3 bg-background/90 backdrop-blur-md shadow-xs" : "py-5"
             )}
         >

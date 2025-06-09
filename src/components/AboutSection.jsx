@@ -3,8 +3,8 @@ import { Code, User, Briefcase } from "lucide-react"
 export const AboutSection =() => {
     return (
         <section id="about" className="py-24 px-4 relative">
-            <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            <div className="container mx-auto max-w-7xl">
+                <h2 className="text-5xl md:text-6xl font-bold mb-12 text-glow text-center">
                     About <span className="text-primary"> Me</span>
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -13,8 +13,15 @@ export const AboutSection =() => {
                             Passionate Data Analyst & Full-Stack Developer
                         </h3>
 
-                        <p className="text-muted-foreground"> 
-                            A computer science student blah blah blah.
+                        <p className="text-muted-foreground text-lg"> 
+                            My full name is actually
+                            <span className="font-semibold text-primary"> Kristian Gerald Gabot</span> 
+                            , but I prefer to be called 
+                            <span className="font-semibold text-primary"> Xian</span>
+                            . Growing up as a curious child, I used to wonder what my mom does with her computer. 
+                            Back then I thought computers are only used for playing games, but I was astonished 
+                            to see my mom deals with data. That's where my interest with technology starts
+                            
                         </p>
 
                         <p className="text-muted-foreground"> 

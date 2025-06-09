@@ -69,7 +69,7 @@ export const HomeSection = () => {
                         <div className="relative w-80 h-80 lg:w-96 lg:h-96">
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl"></div>
                             <img
-                                src="/src/assets/profile-image.jpg"
+                                src="/src/assets/Picture.png"
                                 alt="Kristian - Computer Science Student"
                                 className="relative w-full h-full object-cover rounded-full border-4 border-primary/20 shadow-2xl"
                                 onError={(e) => {
