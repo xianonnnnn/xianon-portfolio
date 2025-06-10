@@ -76,8 +76,8 @@ export const ProjectSection = () => {
                     </h2>
 
                     <p className="md:text-lg text-center text-muted-foreground mt-8 mb-12 max-w-2xl mx-auto">
-                        Here are some of my recent projects. Each project was carefully
-                        crafted with attention to dtail, performance, and user experience.
+                        Here are some of my projects that I created and collaborated with my groupmates.
+                        Most are school projects as I am currently working on my personal projects.
                     </p>
 
                     {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
