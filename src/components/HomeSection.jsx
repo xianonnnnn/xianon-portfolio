@@ -1,6 +1,8 @@
 import { ArrowDown } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useScrollFade } from "../lib/useScrollFade"
+import Picture from "../assets/Picture.png"
+import Resume from "../assets/Resume.pdf"
 
 export const HomeSection = () => {
     const [hideOnScroll, setHideOnScroll] = useState(false);
@@ -63,7 +65,7 @@ export const HomeSection = () => {
                             </a>
 
                             <a
-                                href="/src/assets/Resume.pdf"
+                                href={Resume}
                                 className="cosmic-button"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -78,9 +80,11 @@ export const HomeSection = () => {
                         <div className="relative w-80 h-80 lg:w-96 lg:h-96">
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl"></div>
                             <img
-                                src="/src/assets/Picture.png"
+                                src={Picture}
                                 alt="Kristian - Computer Science Student"
                                 className="relative w-full h-full object-cover rounded-full border-4 border-primary/20 shadow-2xl"
+                                loading="lazy"
+                                decoding="async"
                                 onError={(e) => {
                                     // Fallback to a placeholder if image doesn't exist
                                     e.target.style.display = 'none';

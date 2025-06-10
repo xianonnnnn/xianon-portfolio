@@ -129,21 +129,21 @@ export const ProjectSection = () => {
                     {/*Bento-Grid*/}
                     <div class="bento-grid">
                         <div class="col-left">
-                            <div class="inner-box" onClick={() => handleImageClick("/public/projects/WikAIn.png")}>
-                                <img src="/public/projects/WikAIn.png" alt="" class="project"/>
+                            <div class="inner-box" onClick={() => handleImageClick("/projects/WikAIn.png")}>
+                                <img src="/projects/WikAIn.png" alt="WikAIn Project" class="project" loading="lazy" decoding="async"/>
                             </div>
                         </div>
                         <div class="col-right">
                             <div class="box">
-                                <div class="inner-box" onClick={() => handleImageClick("/public/projects/VentiAirlines.png")}>
-                                    <img src="/public/projects/VentiAirlines.png" alt="" class="project"/>
+                                <div class="inner-box" onClick={() => handleImageClick("/projects/VentiAirlines.png")}>
+                                    <img src="/projects/VentiAirlines.png" alt="Venti Airlines Project" class="project" loading="lazy" decoding="async"/>
                                 </div>
-                                <div class="inner-box" onClick={() => handleImageClick("/public/projects/Reddit.png")}>
-                                    <img src="/public/projects/Reddit.png" alt="" class="project"/>
+                                <div class="inner-box" onClick={() => handleImageClick("/projects/Reddit.png")}>
+                                    <img src="/projects/Reddit.png" alt="Reddit Project" class="project" loading="lazy" decoding="async"/>
                                 </div>
                             </div>
-                            <div class="inner-box" onClick={() => handleImageClick("/public/projects/MedGrocer.png")}>
-                                    <img src="/public/projects/MedGrocer.png" alt="" class="project"/>
+                            <div class="inner-box" onClick={() => handleImageClick("/projects/MedGrocer.png")}>
+                                    <img src="/projects/MedGrocer.png" alt="MedGrocer Project" class="project" loading="lazy" decoding="async"/>
                                 </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ export const ProjectSection = () => {
             {/* Image Modal - Outside the section for full screen coverage */}
             {selectedImage && (
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4" onClick={closeModal}>
-                    <div className={`relative ${selectedImage === "/public/projects/WikAIn.png" ? "max-w-4xl" : "max-w-6xl"} max-h-[90vh]`}>
+                    <div className={`relative ${selectedImage === "/projects/WikAIn.png" ? "max-w-4xl" : "max-w-6xl"} max-h-[90vh]`}>
                         <img 
                             src={selectedImage} 
                             alt="Project preview" 
@@ -161,7 +161,7 @@ export const ProjectSection = () => {
                             onClick={(e) => e.stopPropagation()}
                         />
                         {/* Buttons for WikAIn project */}
-                        {selectedImage === "/public/projects/WikAIn.png" && (
+                        {selectedImage === "/projects/WikAIn.png" && (
                             <div className="flex gap-3 mt-4 justify-center">
                                 <a 
                                     href="https://wikain-filipino.vercel.app/" 
@@ -184,9 +184,9 @@ export const ProjectSection = () => {
                             </div>
                         )}
                         {/* Buttons for other projects */}
-                        {selectedImage !== "/public/projects/WikAIn.png" && (
+                        {selectedImage !== "/projects/WikAIn.png" && (
                             <div className="flex justify-center mt-4 gap-3">
-                                {selectedImage === "/public/projects/VentiAirlines.png" && (
+                                {selectedImage === "/projects/VentiAirlines.png" && (
                                     <>
                                         <a 
                                             href="#" 
@@ -199,7 +199,7 @@ export const ProjectSection = () => {
                                         </a>
                                     </>
                                 )}
-                                {selectedImage === "/public/projects/Reddit.png" && (
+                                {selectedImage === "/projects/Reddit.png" && (
                                     <>
                                         <a 
                                             href="#" 
@@ -212,7 +212,7 @@ export const ProjectSection = () => {
                                         </a>
                                     </>
                                 )}
-                                {selectedImage === "/public/projects/MedGrocer.png" && (
+                                {selectedImage === "/projects/MedGrocer.png" && (
                                     <>
                                         <a 
                                             href="#" 

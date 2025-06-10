@@ -97,6 +97,8 @@ export const SkillsSection = () => {
                                             src={techIcons[skill.name]} 
                                             alt={skill.name}
                                             className="w-20 h-20 object-contain"
+                                            loading="lazy"
+                                            decoding="async"
                                         />
                                     </div>
                                     <span className="text-sm font-medium text-center text-muted-foreground">
