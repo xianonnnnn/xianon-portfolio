@@ -19,10 +19,11 @@ export const useScrollFade = (threshold = 0.1, fadeOutThreshold = 0.8) => {
                 else if (entry.isIntersecting && entry.intersectionRatio <= fadeOutThreshold && hasAnimated) {
                     setIsFadingOut(true);
                 }
-                // Keep element visible when it comes back into view (don't reset)
-                else if (entry.isIntersecting && entry.intersectionRatio >= threshold && hasAnimated) {
-                    setIsVisible(true);
+                // Reset when element is completely out of view
+                else if (!entry.isIntersecting && hasAnimated) {
+                    setIsVisible(false);
                     setIsFadingOut(false);
+                    setHasAnimated(false);
                 }
             },
             {

@@ -252,6 +252,20 @@
     transform: scale(0.98);
     transition: transform 0.1s ease;
   }
+  
+  /* Disable fade transitions on mobile */
+  .animate-scroll-fade-in,
+  .animate-scroll-fade-out {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  /* Ensure sections are always visible on mobile */
+  section {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 .col-left{
