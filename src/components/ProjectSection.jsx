@@ -189,7 +189,7 @@ export const ProjectSection = () => {
                                 {selectedImage === "/projects/VentiAirlines.png" && (
                                     <>
                                         <a 
-                                            href="#" 
+                                            href="https://www.figma.com/proto/YWjLCqtW7ncp6bAt4a0s9M/Airline-Reservation-System?node-id=1-2&p=f&t=gVnlbhpafT4MoRDE-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=10%3A3370" 
                                             target="_blank"
                                             className="px-4 py-2 bg-secondary text-primary-foreground rounded-lg hover:text-primary transition-colors duration-300 flex items-center gap-2"
                                             onClick={(e) => e.stopPropagation()}
@@ -202,7 +202,7 @@ export const ProjectSection = () => {
                                 {selectedImage === "/projects/Reddit.png" && (
                                     <>
                                         <a 
-                                            href="#" 
+                                            href="https://www.figma.com/proto/eMqQNr1IYgrbEk3tL3BoSS/Reddit?node-id=1-3&starting-point-node-id=1%3A3&t=LO6uQO3JDA4VF0ir-1" 
                                             target="_blank"
                                             className="px-4 py-2 bg-secondary text-primary-foreground rounded-lg hover:text-primary transition-colors duration-300 flex items-center gap-2"
                                             onClick={(e) => e.stopPropagation()}
@@ -215,7 +215,7 @@ export const ProjectSection = () => {
                                 {selectedImage === "/projects/MedGrocer.png" && (
                                     <>
                                         <a 
-                                            href="#" 
+                                            href="https://www.figma.com/proto/f4FBq1ojxsfU7IoEVyWks7/MedGrocer?node-id=1-2&starting-point-node-id=1%3A2&t=GhzNosILuRWJ9Gpx-1" 
                                             target="_blank"
                                             className="px-4 py-2 bg-secondary text-primary-foreground rounded-lg hover:text-primary transition-colors duration-300 flex items-center gap-2"
                                             onClick={(e) => e.stopPropagation()}
