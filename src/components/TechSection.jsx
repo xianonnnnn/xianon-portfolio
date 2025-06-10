@@ -88,7 +88,7 @@ export const SkillsSection = () => {
                     {filteredSkills.map((skill, key) => (
                         <div 
                             key={key} 
-                            className="bg-card/85 p-6 rounded-lg shadow-xs card-hover w-[150px] h-[160px] flex flex-col items-center justify-center gap-4"
+                            className="bg-card/85 p-6 rounded-lg shadow-xs card-hover w-[130px] h-[140px] flex flex-col items-center justify-center gap-4"
                         >
                             {techIcons[skill.name] ? (
                                 <>

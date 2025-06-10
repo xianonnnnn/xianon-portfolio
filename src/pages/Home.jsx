@@ -29,7 +29,7 @@ export const Home = () => {
                 <HomeSection />
                 <SkillsSection />
                 <ProjectSection />
-                <AboutSection />
+                {/*<AboutSection />*/}
                 <ContactSection />
             </main>
 

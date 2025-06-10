@@ -183,3 +183,82 @@
   padding: 0;
   text-align: center;
 }
+
+/* 3D Flip Card Utilities */
+@utility perspective-1000 {
+  perspective: 1000px;
+}
+
+@utility transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+@utility backface-hidden {
+  backface-visibility: hidden;
+}
+
+@utility rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.bento-grid {
+  flex: 1;
+  height: flex;
+  width: flex;
+  display: flex;
+  gap: 1em;
+}
+
+.col-left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.col-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.box {
+  flex: 1;
+  border-radius: 1em;
+  display: flex;
+  
+  gap: 1em;
+  transition: 0.2s ease-in-out;
+}
+
+.inner-box {
+  flex: 1;
+  border-radius: 1em;
+  overflow: hidden;
+  opacity: 1;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.col-left .box:nth-of-type(1){
+  flex: 2;
+}
+
+.col-right .inner-box:nth-of-type(1){
+  flex: 1.5;
+}
+
+.inner-box:hover{
+  transform: scale(1.02);
+  opacity: 1;
+  /*border: 2px solid hsl(var(--primary));*/
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), inset 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.project {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
